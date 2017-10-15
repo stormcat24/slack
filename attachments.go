@@ -58,6 +58,17 @@ type AttachmentActionCallback struct {
 	TriggerID    string `json:"trigger_id"`
 }
 
+type AttachmentSubmissionCallback struct {
+	Type       string            `json:"type"`
+	Submission map[string]string `json:"submission"`
+	CallbackID string            `json:"callback_id"`
+	Team       Team              `json:"team"`
+	Channel    Channel           `json:"channel"`
+	User       User              `json:"user"`
+	ActionTs   string            `json:"action_ts"`
+	Token      string            `json:"token"`
+}
+
 // ConfirmationField are used to ask users to confirm actions
 type ConfirmationField struct {
 	Title       string `json:"title,omitempty"`        // Optional.
